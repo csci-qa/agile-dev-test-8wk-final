@@ -8,15 +8,13 @@ end
 When(/^I perform a search$/) do
   @page.perform_search
 end
-
 Then(/^I see search results$/) do
-  pending
+  expect(@page.html).to include("Can't find it? Try the Help Desk at")
 end
 
 When(/^I search for csci 2994$/) do
   pending
 end
-
 Then(/^I recieve multiple results$/) do
   pending
   And(/^the first result is titled "CSCI-2994 - CSCI Current Topics"$/) do
@@ -33,7 +31,6 @@ end
 When(/^I perform a Subject Search in Autumn Semester 2015$/) do
   pending
 end
-
 Then(/^two sections of CSCI 2994 should be displayed$/) do
   pending
 end
