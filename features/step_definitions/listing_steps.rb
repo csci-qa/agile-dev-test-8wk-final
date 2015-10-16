@@ -1,7 +1,8 @@
 require 'watir-webdriver'
 
 Given(/^I am on the CSCC homepage$/) do
-  pending
+  @page = ListingPage.new @browser
+  @page.goto
 end
 
 When(/^I perform a search"$/) do

@@ -4,3 +4,5 @@ class ListingPage
   include PageObject
 
   page_url "http://cscc.edu/"
+  
+end
