@@ -4,10 +4,8 @@
 ### Course listing
 - Searching for "csci 2994" from CSCC's homepage yields more than 1 result
 - First result of search is titled "CSCI-2994 - CSCI Current Topics"
-- Two sections of CSCI 2994 should be displayed in the results of a Subject Search in Autumn Semester 2015
-- Users must be able to reach those search results from the CSCC homepage
-- Each CSCI 2994 result should link to the definition of a Blended course
-- Each CSCI 2994 result's Course Name should link to the Computer Science department course log
+- The course lists "None" for its prerequisites. 
+- There's a link to the bookstore under "Textbooks" for the course listing.
 
 ### Rubular
 - Should be able to enter a regexp of "(.\*)@(.\*)\\.(.*)" and a test string of "jdenen@cscc.edu"
