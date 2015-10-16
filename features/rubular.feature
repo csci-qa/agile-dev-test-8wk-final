@@ -1,7 +1,7 @@
 Feature: Rubular
-  As 
-  I want to 
-  So that 
+  As a user
+  I want to utilize rubular
+  So that I can know more about my code
   
   Scenario: 
 	Given 

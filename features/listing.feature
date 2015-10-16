@@ -1,7 +1,7 @@
 Feature: Listing
-  As 
-  I want to 
-  So that 
+  As a user
+  I want to perform searches
+  So that I can verify course information
   
   Scenario: 
 	Given 
