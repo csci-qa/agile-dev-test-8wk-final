@@ -16,7 +16,7 @@ When(/^I search for "csci 2994"$/) do
   @page.search_csci
 end
 Then(/^I recieve multiple results$/) do
-  pending
+  expect(@page.results).to >= 2
   And(/^the first result is titled "CSCI-2994 - CSCI Current Topics"$/) do
 	pending
   end

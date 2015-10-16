@@ -18,6 +18,8 @@ class ListingPage
     self.submit
   end
   
+  label(:results, :id => "resInfo-0")
+  
   
 end
 
