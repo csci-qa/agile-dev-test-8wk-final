@@ -12,8 +12,8 @@ Then(/^I see search results$/) do
   expect(@page.html).to include("Can't find it? Try the Help Desk at")
 end
 
-When(/^I search for csci 2994$/) do
-  pending
+When(/^I search for "csci 2994"$/) do
+  @page.search_csci
 end
 Then(/^I recieve multiple results$/) do
   pending

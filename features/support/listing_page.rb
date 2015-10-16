@@ -5,13 +5,19 @@ class ListingPage
 
   page_url "http://cscc.edu/"
   
-  text_field(:q, :id => "input")
-  button(:sa, :id => "submit")
+  text_field(:input, :id => "input")
+  button(:submit, :id => "submit")
   
   def perform_search
-    self.q = "computer science"
-    self.sa
+    self.input = "computer science"
+    self.submit
   end
-   
+  
+  def search_csci
+    self.input = "csci 2994"
+    self.submit
+  end
+  
+  
 end
 
