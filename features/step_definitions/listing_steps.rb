@@ -5,15 +5,15 @@ Given(/^I am on the CSCC homepage$/) do
   @page.goto
 end
 
-When(/^I perform a search"$/) do
-  pending
+When(/^I perform a search$/) do
+  @page.perform_search
 end
 
 Then(/^I see search results$/) do
   pending
 end
 
-When(/^I search for "csci 2994"$/) do
+When(/^I search for csci 2994$/) do
   pending
 end
 
