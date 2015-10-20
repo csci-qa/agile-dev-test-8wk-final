@@ -46,11 +46,12 @@ Then /^the prerequisites should be None$/ do
 end
 
 
-#Using the Book Store Link (HAVE QUESTIONS ON!)
+#Scenario: Using the Book Store Link
 When /^I click the book store link$/ do
-  pending "WIP"
+  @browser.link(:href, "http://bookstore.cscc.edu").click
+  @browser.windows.last.use
 end
 
 Then /^I should be directed to the book store page$/ do
-  pending "WIP"
+  expect(@browser.html).to include("home-1a")
 end
