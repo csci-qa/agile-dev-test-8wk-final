@@ -17,7 +17,7 @@ Feature: Listing A Course
   Given I am on the CSCI-2994 - CSCI Current Topics page
   Then the prerequisites should be None
 
-  Scenario: Using Textbook Link
+  Scenario: Using the Book Store Link
   Given I am on the CSCI-2994 - CSCI Current Topics page
-  When I click the textbook link
+  When I click the book store link
   Then I should be directed to the book store page
