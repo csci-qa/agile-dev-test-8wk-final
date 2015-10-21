@@ -13,11 +13,6 @@ Feature: Listing
 	When I search for "csci 2994"
 	Then I recieve multiple results
       And the first result is titled "CSCI-2994 - CSCI Current Topics"
-      And each result links to the definition of a Blended course
-      And each resulting Course Name links to the Computer Science department course log
-    
-  Scenario: 
-	Given I am on the CSCC homepage
-	When I perform a Subject Search in Autumn Semester 2015
-	Then two sections of CSCI 2994 should be displayed
-    
+      And the prerequisites are "none"
+      And there is a a link to the bookstore under "Textbooks" for the course listing
+  
