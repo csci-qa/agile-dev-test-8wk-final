@@ -1,7 +1,8 @@
 require 'watir-webdriver'
 
-Given(/^ $/) do
-  pending
+Given(/^I am on the Rubular page$/) do
+  @page = RubularPage.new @browser
+  @page.goto
 end
 
 When(/^ $/) do
