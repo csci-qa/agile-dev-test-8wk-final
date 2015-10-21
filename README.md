@@ -8,7 +8,7 @@
 - There's a link to the bookstore under "Textbooks" for the course listing.
 
 ### Rubular
-- Should be able to enter a regexp of "(.\*)@(.\*)\\.(.*)" and a test string of "jdenen@cscc.edu"
+- Should be able to enter a regexp of "(.*)@(.*)\.(.*)" and a test string of "jdenen@cscc.edu"
 - Should return a match result of "jdenen@cscc.edu"
 - Should return three match groups:
   - jdenen
