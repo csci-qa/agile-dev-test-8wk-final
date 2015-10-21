@@ -16,7 +16,11 @@ class ListingPage
   def search_csci
     self.input = "csci 2994"
     self.submit
-  end  
+  end
+  
+  def class_link
+    
+  end
     
 end
 
