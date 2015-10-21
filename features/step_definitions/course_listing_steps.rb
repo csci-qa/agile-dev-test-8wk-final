@@ -49,6 +49,7 @@ end
 #Scenario: Using the Book Store Link
 When /^I click the book store link$/ do
   @browser.link(:href, "http://bookstore.cscc.edu").click
+  sleep 4
   @browser.windows.last.use
 end
 
