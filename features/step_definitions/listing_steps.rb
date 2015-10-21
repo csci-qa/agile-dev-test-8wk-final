@@ -17,13 +17,10 @@ When(/^I search for "csci 2994"$/) do
 end
 Then(/^I recieve multiple results$/) do
   pending
-  And(/^the first result is titled "CSCI-2994 - CSCI Current Topics"$/) do
+  And(/^the first result is titled "CSCI-2994 - CSCI Current Topics"$/)
 	pending
-  end
-  And(/^the prerequisites are "none"$/) do
+  And(/^the prerequisites are "none"$/)
 	pending
-  end
-  And(/^there is a a link to the bookstore under "Textbooks" for the course listing$/) do
+  And(/^there is a a link to the bookstore under "Textbooks" for the course listing$/)
 	pending
-  end
 end

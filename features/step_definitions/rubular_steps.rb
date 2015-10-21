@@ -5,10 +5,10 @@ Given(/^I am on the Rubular page$/) do
   @page.goto
 end
 
-When(/^ $/) do
-  pending
+When(/^I enter the desired values$/) do
+  @page.input_values
 end
 
-Then(/^ $/) do
+Then(/^the values are accepted$/) do
   pending
 end
