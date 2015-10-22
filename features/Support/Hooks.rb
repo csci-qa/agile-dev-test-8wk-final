@@ -1,7 +1,7 @@
 
 Before do
 	@browser = Watir::Browser.new :chrome
-	@browser.goto "http://cscc.edu/"
+	
 end
 
 After do

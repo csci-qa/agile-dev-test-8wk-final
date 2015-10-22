@@ -13,7 +13,6 @@ Given I am on the cscc.edu page
 When searching csci 2994 on CSCC homepage to view first result 
 Then it is titled CSCI-2994 - CSCI Current Topics
 
-@test
 Scenario: The course lists "None" for its prerequisites. 
 Given I am on the cscc.edu page
 When I click the link for csci 2994 from result page

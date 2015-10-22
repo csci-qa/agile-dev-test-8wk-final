@@ -1,6 +1,7 @@
 
  Given /^I am on the cscc.edu page$/ do
  	# navigate our create a post page
+ 	@browser.goto "http://cscc.edu/"
  	@page = SearchThePage.new @browser
  	@page.goto
  end

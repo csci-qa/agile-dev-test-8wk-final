@@ -10,6 +10,7 @@ class SearchThePage
 	div(:results, :id => "resInfo-0")
 	div(:first_result, :class => "gsc-thumbnail-inside")
 	div(:prereq, :id => "bottom")
+	link(:textbook, )
 
 	def search_cscc
 	browser.text_field(:id, "input").set("csci 2994")
