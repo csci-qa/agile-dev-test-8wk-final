@@ -8,16 +8,20 @@ end
 When(/^I perform a search$/) do
   @page.perform_search
 end
-Then(/^I see search results$/) do
-  expect(@page.html).to include("Can't find it? Try the Help Desk at")
+Then(/^I receive multiple results$/) do
+  expect(@page.html).to include("About 50 results")
+end
+Then(/^the first result is titled "CSCI-2994 - CSCI Current Topics"$/) do
+  expect(@page.first_result_title).to eq("CSCI-2994 - CSCI Current Topics")
 end
 
 When(/^I navigate to that class page$/) do
-  pending
+  @page = ThatClassPage.new @browser
+  @page.goto
 end
 Then(/^the prerequisites are "none"$/) do
-  pending
+  expect(@page.prerequisites).to include("None")
 end
-Then(/^there is a a link to the bookstore under "Textbooks" for the course listing$/) do
-  pending
+Then(/^there is a link to the bookstore under "Textbooks" for the course listing$/) do
+  expect(@page.bookstore_link?).to be true
 end
