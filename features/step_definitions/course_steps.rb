@@ -14,7 +14,7 @@ Then /^I should get more than 1 result$/ do
   @page = CSCCSearchResultsPage.new @browser
   results_message = @page.number_of_results
   results_match = results_message.scan(/\d+/)
-  expect(results_match[0].to_i).to be > 0
+  expect(results_match[0].to_i).to be > 1
 end
 
 And /^the first result should be titled CSCI-2994 - CSCI Current Topics$/ do
