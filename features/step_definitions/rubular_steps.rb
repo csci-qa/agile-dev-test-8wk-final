@@ -7,6 +7,7 @@ end
 
 When(/^I enter the desired values$/) do
   @page.input_values
+  sleep 5
 end
 
 Then(/^the values are accepted$/) do

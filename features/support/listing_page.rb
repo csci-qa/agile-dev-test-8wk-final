@@ -7,6 +7,7 @@ class ListingPage
   
   text_field(:input, :id => "input")
   button(:submit, :id => "submit")
+  #link(:first, :id => "first" :href => "http://global.cscc.edu/courses/course.asp?Z=&amp;D=B&amp;Q=SP&amp;Y=16&amp;C=CSCI-2994&amp;T=")
   
   def perform_search
     self.input = "computer science"
@@ -18,9 +19,9 @@ class ListingPage
     self.submit
   end
   
-  def class_link
-    
-  end
+  #def class_link
+  #  self.first
+  #end
     
 end
 

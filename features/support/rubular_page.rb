@@ -10,7 +10,7 @@ class RubularPage
   
   
   def input_values
-    self.regex = "(.*)@(.*)\.(.*)"
+    self.regex = "(.*)@(.*)\\.(.*)"
     self.test = "jdenen@cscc.edu"
   end
   

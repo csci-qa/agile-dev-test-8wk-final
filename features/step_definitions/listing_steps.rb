@@ -22,5 +22,6 @@ Then(/^I recieve multiple results$/) do
   And(/^the prerequisites are "none"$/)
 	pending
   And(/^there is a a link to the bookstore under "Textbooks" for the course listing$/)
-	pending
+	@page.class_link
+	sleep 5
 end

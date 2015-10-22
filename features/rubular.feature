@@ -6,8 +6,6 @@ Feature: Rubular
  Scenario: 
 	Given I am on the Rubular page
 	When I enter the desired values
-	Then the values are accepted
-      And the page displays the desired result
-      And the page should display the desired match groups
-      And the match groups each have a new line
-      And the match groups should have an index number
+	Then the page displays the desired result
+      And the results are formatted correctly
+      
