@@ -12,16 +12,12 @@ Then(/^I see search results$/) do
   expect(@page.html).to include("Can't find it? Try the Help Desk at")
 end
 
-When(/^I search for "csci 2994"$/) do
-  @page.search_csci
-end
-Then(/^I recieve multiple results$/) do
+When(/^I navigate to that class page$/) do
   pending
-  And(/^the first result is titled "CSCI-2994 - CSCI Current Topics"$/)
-	pending
-  And(/^the prerequisites are "none"$/)
-	pending
-  And(/^there is a a link to the bookstore under "Textbooks" for the course listing$/)
-	@page.class_link
-	sleep 5
+end
+Then(/^the prerequisites are "none"$/) do
+  pending
+end
+Then(/^there is a a link to the bookstore under "Textbooks" for the course listing$/) do
+  pending
 end

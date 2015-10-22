@@ -10,6 +10,10 @@ When(/^I enter the desired values$/) do
   sleep 5
 end
 
-Then(/^the values are accepted$/) do
+Then(/^the page displays the desired result$/) do
+  pending
+end
+
+Then(/^the results are formatted correctly$/) do
   pending
 end
