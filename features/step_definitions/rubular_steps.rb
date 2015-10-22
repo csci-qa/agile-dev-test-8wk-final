@@ -7,12 +7,13 @@ end
 
 When(/^I enter the desired values$/) do
   @page.input_values
+  sleep 1
 end
 
 Then(/^the page displays the desired result$/) do
-  pending
+  expect(@page.match_string).to eq("jdenen@cscc.edu")
 end
 
 Then(/^the results are formatted correctly$/) do
-  pending
+  expect(@page.match_captures).to eq("1. jdenen\n2. cscc\n3. edu")
 end
