@@ -13,8 +13,8 @@ When /^I search for csci 2994$/ do
 end
 
 Then /^more than one result is returned$/ do
-  expect(@browser.html).to include("<b>CSCI</b>-<b>2994</b> - CSCI Current Topics")
-  expect(@browser.html).to include("Computer Science (<b>CSCI</b>) 2015-2016 - Columbus State Community")
+  @results = ResultsPage.new @browser
+  expect(@results.result_number).to include("50 results")
 end
 
 
@@ -30,7 +30,8 @@ When /^the results are displayed$/ do
 end
 
 Then /^the first result should be titled CSCI-994 - CSCI Current Topics$/ do
-  expect(@browser.html).to include("<b>CSCI</b>-<b>2994</b> - CSCI Current Topics")
+  @results = ResultsPage.new @browser
+  expect(@results.first_result_element.text).to eq "CSCI-2994 - CSCI Current Topics"
 end
 
 
