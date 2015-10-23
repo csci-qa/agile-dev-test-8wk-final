@@ -29,7 +29,7 @@ When /^the results are displayed$/ do
   @browser.button(:id => "submit").click
 end
 
-Then /^the first result should be titled CSCI-994 - CSCI Current Topics$/ do
+Then /^the first result should be titled CSCI-2994 - CSCI Current Topics$/ do
   @results = ResultsPage.new @browser
   expect(@results.first_result_element.text).to eq "CSCI-2994 - CSCI Current Topics"
 end

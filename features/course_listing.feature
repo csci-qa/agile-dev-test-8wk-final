@@ -11,7 +11,7 @@ Feature: Listing A Course
   Scenario: Finding the First Result
   Given I have searched for csci 2994
   When the results are displayed
-  Then the first result should be titled CSCI-994 - CSCI Current Topics
+  Then the first result should be titled CSCI-2994 - CSCI Current Topics
 
   Scenario: Viewing the Prerequisites
   Given I am on the CSCI-2994 - CSCI Current Topics page
