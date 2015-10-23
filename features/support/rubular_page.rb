@@ -6,7 +6,7 @@ class RubularPage
   page_url "http://rubular.com/"
   
   text_field(:regex, :id => "regex")
-  text_field(:test, :id => "test")
+  textarea(:test, :id => "test")
   span(:match_string, :id => "match_string_inner")
   div(:match_captures, :id => "match_captures")
   
