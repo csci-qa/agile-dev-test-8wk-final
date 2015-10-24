@@ -12,10 +12,12 @@ And /^I enter jdenen@cscc.edu$/ do
 end
 
 Then /^the match result is jdenen@cscc.edu$/ do
-  expect(@page.get_match).to eq "jdene@cscc.edu"
+  sleep 5
+  expect(@page.html).to include('<span class="match">jdenen@cscc.edu</span>')
+  #have_tag("span",  :text => "jdene@cscc.edu") 
 end
 
 And /^returns three match groups on new lines with index$/ do
-  expect(@page.div(:id => "match_captures")).text.to eq ""
+  expect(@page.div(:id => "match_captures")).text.to eq "1.	jdenen /n2.	cscc/n3.	edu"
 end
 
