@@ -12,10 +12,10 @@ And /^I enter jdenen@cscc.edu$/ do
 end
 
 Then /^the match result is jdenen@cscc.edu$/ do
-  Pending
+  expect(@page.div(:id => "match_string")).text.to eq "jdene@cscc.edu"
 end
 
 And /^returns three match groups on new lines with index$/ do
-  Pending
+  expect(@page.div(:id => "match_captures")).text.to eq ""
 end
 
