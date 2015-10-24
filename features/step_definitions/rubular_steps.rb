@@ -1,13 +1,14 @@
 Given /^I am on the Rubular home page$/ do 
-  Pending
+  @page = RubularPage.new @browser
+  @page.goto
 end
 
-When /^I enter the regex (".*)@(.*)\.(.*)"$/ do
-  Pending
+When /^I enter the regex (.*)@(.*)\.(.*)$/ do
+  @page.enter_regex
 end
 
 And /^I enter jdenen@cscc.edu$/ do
-  Pending
+  @page.enter_test
 end
 
 Then /^the match result is jdenen@cscc.edu$/ do
