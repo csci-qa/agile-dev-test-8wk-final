@@ -18,6 +18,12 @@ Then /^the match result is jdenen@cscc.edu$/ do
 end
 
 And /^returns three match groups on new lines with index$/ do
-  expect(@page.div(:id => "match_captures")).text.to eq "1.	jdenen /n2.	cscc/n3.	edu"
+  expect(@page.html).to include("<table>
+        <tbody>
+             <tr><td>1.</td><td>jdenen</td></tr> 
+             <tr><td>2.</td><td>cscc</td></tr> 
+             <tr><td>3.</td><td>edu</td></tr> 
+        </tbody>
+      </table>")
 end
 
