@@ -25,7 +25,7 @@ To complete this assignment, you need to:
 2. Clone your fork onto your machine with `git clone https://github.com/YOUR_USERNAME/agile-dev-test-8wk-final`
 3. Write code
 4. Push your work to your forked repository with `git push`
-5. Submit a pull request to your branch on this repository
+5. Submit a pull request WITH YOUR NAME IN THE TITLE
 
 ## Questions or Concerns
 
