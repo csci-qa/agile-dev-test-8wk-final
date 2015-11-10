@@ -1,13 +1,15 @@
 # Agile Development and Testing Project
 
-## Acceptance criteria
+## User Stories
 ### Course listing
+As a student, I want to find the special topics course, so that I can learn Cucumber
 - Searching for "csci 2994" from CSCC's homepage yields more than 1 result
 - First result of search is titled "CSCI-2994 - CSCI Current Topics"
 - The course lists "None" for its prerequisites. 
 - There's a link to the bookstore under "Textbooks" for the course listing.
 
 ### Rubular
+As a student, I want to make sure the instructor has a valid email address, so I can ask questions
 - Should be able to enter a regexp of "(.\*)@(.\*)\\.(.*)" and a test string of "jdenen@cscc.edu"
 - Should return a match result of "jdenen@cscc.edu"
 - Should return three match groups:
