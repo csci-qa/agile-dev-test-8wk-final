@@ -24,7 +24,7 @@ As a student, I want to make sure the instructor has a valid email address, so I
 To complete this assignment, you need to:
 
 1. Fork this repository
-2. Clone your fork onto your machine with `git clone https://github.com/YOUR_USERNAME/agile-dev-test-8wk-final`
+2. Clone your fork onto your machine with `git clone https://github.com/YOUR_USERNAME/automation-with-watir-webdriver`
 3. Write code
 4. Push your work to your forked repository with `git push`
 5. Submit a pull request WITH YOUR NAME IN THE TITLE
