@@ -5,7 +5,7 @@ Feature: As a student I want to find
 	Scenario: A search for CSCI 2994 from the homepage of
 		CSCC yields more than one result
 		When I search for CSCI 2994
-		Then the search yields more than on result
+		Then the search yields more than one result
 		Then the first result is "CSCI-2994 - CSCI Current Topics"
 		
 	Scenario: The course CSCI 2994 list none as its prerequisites
