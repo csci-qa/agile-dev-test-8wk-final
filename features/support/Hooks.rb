@@ -1,5 +1,5 @@
-before do 
-	@browser = Watiir::.new
+Before do 
+	@browser = Watir::Browser.new
 end 
 
 After do 
