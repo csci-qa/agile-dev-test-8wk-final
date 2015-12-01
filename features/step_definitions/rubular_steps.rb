@@ -1,31 +1,54 @@
-When /^I enter the regexp of "(.\*)@(.\*)\\.(.*)" and a test string of "fry975@gmail.com"$/ do
-	"pending"
+require 'watir-webdriver'
+
+When /^I enter the regexp of '(.*)@(.*)\.(.*)' and a test string of 'jdenen@cscc.edu'$/ do
+	@browser.goto 'www.rubular.com'
+	expression_field = @browser.text_field(id: 'regex')
+	expression_field.set ('(.*)@(.*)\.(.*)')
+	expression_field.send_keys(:enter)
+	sleep 5
+	test_field = @browser.text_field(id: 'test')
+	test_field.set ('jdenen@cscc.edu')
+	test_field.send_keys(:enter)
+	
 end
 
-Then /^I I get a match result of "fry975@gmail.com"$/ do
-	"pending"
-end
-
-When /^I enter the regexp and "fry975@gmail.com"$/ do
-	"pending"
-end
-
-Then /^I get three groups fry975, gmail, com$/ do
-	"pending"
-end
-
-When /^I get the match results in three groups$/ do
-	"pending"
-end
-
-Then /^they should be formatted onto a new line$/ do
-	"pending"
+Then /^I get a match result of "jdenen@cssc.edu" in three groups on different lines$/ do
+	result = @browser.div(class: 'match_string')
+	groups = @browser.divs(class: 'match_captures')
+	expect(@results).to eq "jdenen@cscc.edu"
+	expect(@groups).to eq "1. jdenen", "2. cscc", "3. edu"
 end
 
 When /^I get the match results from rubular$/ do
-	"pending"
+	@browser.goto 'www.rubular.com'
+	expression_field = @browser.text_field(id: 'regex')
+	expression_field.set ('(.*)@(.*)\.(.*)')
+	expression_field.send_keys(:enter)
+	test_field = @browser.text_field(id: 'test')
+	test_field.set ('jdenen@cscc.edu')
+	test_field.send_keys(:enter)
+	
 end
 
-Then /^they should be preceaded by an index number$/ do
-	"pending"
+Then /^they should be preceded by an index number$/ do
+	result = @browser.div(class: 'match_captures')
+	expect(@result).to eq "1. jdenen", "2. cscc", "3. edu"
+	
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

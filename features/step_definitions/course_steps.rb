@@ -1,31 +1,57 @@
-When /^I search for "CSCI 2994" at CSCC's homepage$/ do
-	"pending"	
+require 'watir-webdriver'
+
+When /^I search CSCCs homepage using the search box$/ do
+	@browser.goto 'www.cscc.edu'
+	search_field = @browser.text_field(id: 'input')
+	search_field.set ('CSCI 2994')
+	search_field.send_keys(:enter)
 end
 
 Then /^I get more than one result$/ do
-	"pending"
+	results = @browser.divs(class: 'gs-title')
+	puts results.size
+	expect(results.size).to be > 0
 end
 
-When /^I execute the initial search$/ do
-	"pending"
+When /^I click the first result$/ do
+	@browser.goto 'www.cscc.edu'
+	search_field = @browser.text_field(id: 'input')
+	search_field.set ('CSCI 2994')
+	search_field.send_keys(:enter)
+	link_a = @browser.a(class: 'gs-title').click
+	@browser.windows.last.use
 end
 
-Then /^I get "CSCI-2994 - CSCI Current Topics" as the first result$/ do
-	"pending"
+Then /^I go to this courses page$/ do
+	results = @browser.title
+	expect(@browser.title).to eq "CSCI-2994 - CSCI Current Topics"
 end
 
-When /^I view the course listing$/ do
-	"pending"
+When /^I look at the course description$/ do
+	@browser.goto 'www.cscc.edu'
+	search_field = @browser.text_field(id: 'input')
+	search_field.set ('CSCI 2994')
+	search_field.send_keys(:enter)
+	link_a = @browser.a(class: 'gs-title').click
+	@browser.windows.last.use
 end
 
 Then /^I get no prerequisites for the course$/ do
-	"pending"
+	course_info @browser.div(id= 'course-info')
+	course_info ps[4]
+	expect(course_info.text).to be "none"
 end
 
 When /^I look under textbooks in the course listing$/ do
-	"pending"
+	@browser.goto 'www.cscc.edu'
+	search_field = @browser.text_field(id: 'input')
+	search_field.set ('CSCI 2994')
+	search_field.send_keys(:enter)
+	link_a = @browser.a(class: 'gs-title').click
+	@browser.windows.last.use
 end
 
 Then /^there is a link to the bookstore under "Textbooks"$/ do
-	"pending"
+	results = @browser.divs(class: 'course-info')
+	expect(@results.text).to eq "View required and optional textbooks for CSCI2994."
 end
