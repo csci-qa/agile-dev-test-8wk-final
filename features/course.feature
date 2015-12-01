@@ -1,4 +1,4 @@
-Feature: As a student I want to find the special topics course so that I can learn cucmber
+Feature: As a student I want to find the special topics course so that I can learn cucumber
 
 	Scenario: A search for CSCI 2994 from the homepage of
 		CSCC yields more than one result
