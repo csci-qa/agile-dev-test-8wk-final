@@ -37,9 +37,9 @@ When /^I look at the course description$/ do
 end
 
 Then /^I get no prerequisites for the course$/ do
-	course_info @browser.div(id= 'course-info')
-	course_info ps[4]
-	expect(course_info.text).to be "none"
+	result = @browser.div(id: 'course-info')
+	result.ps[4]
+	expect(result.ps[4].text).to eq "None"
 end
 
 When /^I look under textbooks in the course listing$/ do
@@ -51,7 +51,8 @@ When /^I look under textbooks in the course listing$/ do
 	@browser.windows.last.use
 end
 
-Then /^there is a link to the bookstore under "Textbooks"$/ do
-	results = @browser.divs(class: 'course-info')
-	expect(@results.text).to eq "View required and optional textbooks for CSCI2994."
+Then /^there is a link to the bookstore under textbooks$/ do
+	results = @browser.div(id: 'course-info')
+	results.ps[7]
+	expect(results.ps[7].text).to eq "View required and optional textbooks for CSCI2994.\n(opens in new window)"
 end

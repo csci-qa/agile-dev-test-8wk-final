@@ -17,6 +17,6 @@ Feature:Course Listings
 		Then I get no prerequisites for the course
 	
 	@course	
-	Scenario:There's a link to the bookstore under "Textbooks" for the course listing.
+	Scenario:There's a link to the bookstore under Textbooks for the course listing.
 		When I look under textbooks in the course listing
-		Then there is a link to the bookstore under "Textbooks"
+		Then there is a link to the bookstore under textbooks
