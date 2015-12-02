@@ -14,7 +14,6 @@ Then /^the first result is "CSCI-2994 - CSCI Current Topics"$/ do
 	expect(@results[0].div.div.div.a.text) .to eq("CSCI-2994 - CSCI Current Topics")
 end
 
-
 When /^I look at the course CSCI 2994$/ do
 	@browser.goto 'http://global.cscc.edu/courses/course.asp?Z=&D=B&Q=SP&Y=16&C=CSCI-2994&T='
 	end
@@ -38,7 +37,7 @@ Then /^I can open the bookstore site to the required text book$/ do
   @courseInfo[x].a.click
   sleep 5
   @browser.windows.last.use
-  expect(@browser.url).to eq("http://www.bkstr.com/columbusstateccstore")
+  expect(@browser.url).to eq("http://www.bkstr.com/columbusstateccstore/home/en?cm_mmc=Redirect-_-VanityURL-_-cscc.bkstr.com-_-14803")
 end
 
 
