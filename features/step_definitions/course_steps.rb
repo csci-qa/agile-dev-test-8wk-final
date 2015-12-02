@@ -41,7 +41,7 @@ Then /^I can open the bookstore site to the required text book$/ do
   @courseInfo[x].a.click
   sleep 5
   @browser.windows.last.use
-  expect(@browser.url).to eq("http://www.bkstr.com/columbusstateccstore/home/en?cm_mmc=Redirect-_-VanityURL-_-cscc.bkstr.com-_-14803")
+  expect(@browser.url).to eq("http://www.bkstr.com/columbusstateccstore")
 end
 
 
