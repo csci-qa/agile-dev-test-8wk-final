@@ -1,6 +1,6 @@
 require 'watir-webdriver'
 
-# When I enter the regexp (.*)@(.*)\.(.*)
+
 When /^I enter the regexp \(\.\*\)@\(\.\*\)\\\.\(\.\*\) and test string jdenen@cscc\.edu$/ do
   @browser.goto 'www.rubular.com'
   @search_field = @browser.text_field(id: 'regex')
