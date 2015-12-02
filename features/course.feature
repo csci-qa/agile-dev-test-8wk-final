@@ -7,7 +7,7 @@ Feature: As a student I want to find the special topics course so that I can lea
 		
 	Scenario: The course CSCI 2994 list none as its prerequisites
 		When I look at the course CSCI 2994
-		Then the course listing has None for its prerequisites
+		Then the course listing has none for its prerequisites
 		Then I can open the bookstore site to the required text book
 
 

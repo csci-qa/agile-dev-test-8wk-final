@@ -1,8 +1,5 @@
 require 'watir-webdriver'
 
-
-
-# When I search for CSCI 2994
 When /^I search for CSCI 2994$/ do
 	@browser.goto 'cscc.edu'
 	search_field = @browser.text_field(name: 'q')
@@ -21,7 +18,7 @@ end
 When /^I look at the course CSCI 2994$/ do
 	@browser.goto 'http://global.cscc.edu/courses/course.asp?Z=&D=B&Q=SP&Y=16&C=CSCI-2994&T='
 	end
-Then /^the course listing has None for its prerequisites$/ do
+Then /^the course listing has none for its prerequisites$/ do
   content = @browser.div(id: 'course-info')
 	@courseInfo = content.ps
   @courseHeader = content.h3s
