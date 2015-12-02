@@ -14,7 +14,7 @@ Then /^the first result is "CSCI-2994 - CSCI Current Topics"$/ do
 	expect(@results[0].div.div.div.a.text) .to eq("CSCI-2994 - CSCI Current Topics")
 end
 
-# When I look at the coure CSCI 2994
+
 When /^I look at the course CSCI 2994$/ do
 	@browser.goto 'http://global.cscc.edu/courses/course.asp?Z=&D=B&Q=SP&Y=16&C=CSCI-2994&T='
 	end
