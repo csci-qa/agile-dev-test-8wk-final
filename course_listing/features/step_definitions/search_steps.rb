@@ -1,12 +1,5 @@
 require 'watir-webdriver'
 
-# Hooks
-Before do
-	@browser = Watir::Browser.new
-end
-After do
-	@browser.close
-end
 
 # When I search for CSCI 2994
 When /^I search for CSCI 2994$/ do
